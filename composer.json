@@ -1,0 +1,61 @@
+{
+    "name": "kanekescom/laravel-siasn-referensi-api",
+    "description": "Library to consume the SIASN REFERENSI BKN API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Achmad Hadi Kurnia",
+            "email": "imachmadhadikurnia@gmail.com",
+            "homepage": "https://achmadhadikurnia.com"
+        }
+    ],
+    "homepage": "https://github.com/kanekescom/laravel-siasn-referensi-api",
+    "keywords": [
+        "laravel",
+        "siasn",
+        "laravel-siasn-referensi-api",
+        "referensi",
+        "api",
+        "bkn"
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0.1",
+        "illuminate/support": "^8.0|^9.0|^10.0",
+        "kanekescom/laravel-helperia": "^1.0",
+        "kanekescom/laravel-siasn-api": "^1.0",
+        "spatie/laravel-fractal": "^5.8"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Kanekescom\\Siasn\\Api\\Referensi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kanekescom\\Siasn\\Api\\Referensi\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kanekescom\\Siasn\\Api\\Referensi\\ReferensiServiceProvider"
+            ],
+            "aliases": {
+                "Referensi": "Kanekescom\\Siasn\\Api\\Referensi\\Facades\\Referensi"
+            }
+        },
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
