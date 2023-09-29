@@ -17,9 +17,9 @@ class GolonganTransformer extends TransformerAbstract
             'id' => $item['id'],
             'nama' => $item['nama'],
             'nama_pangkat' => $item['namaPangkat'],
-            'fungsi_kredit_utama' => $item['fungKredututama'], // int
-            'fungsi_kredit_tambahan' => $item['fungKreditTambahan'], // int
-            'fungsi_kredit_total' => $item['fungKreditTotal'], // int
+            'fungsi_kredit_utama' => $item['fungKredututama'], // ? From int
+            'fungsi_kredit_tambahan' => $item['fungKreditTambahan'], // ? From int
+            'fungsi_kredit_total' => $item['fungKreditTotal'], // ? From int
         ];
     }
 }

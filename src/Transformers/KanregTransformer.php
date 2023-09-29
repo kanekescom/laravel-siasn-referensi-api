@@ -19,8 +19,7 @@ class KanregTransformer extends TransformerAbstract
             'nama' => $item['nama'],
             'pengenal' => $item['pengenal'],
             'satuan_kerja_id' => $item['satuanKerjaId'],
-            'tanggal_jorge' => $item['tanggalJorge'],
-            'tanggal_jorge__formatted' => strtotime($item['tanggalJorge']) ? date('Y-m-d H:i:s', strtotime($item['tanggalJorge'])) : null,
+            'tanggal_jorge' => strtotime($item['tanggalJorge']) ? date('Y-m-d H:i:s', strtotime($item['tanggalJorge'])) : null, // ? From d-m-Y H:i:s date format
         ];
     }
 }

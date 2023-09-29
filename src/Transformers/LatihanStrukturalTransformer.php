@@ -17,8 +17,7 @@ class LatihanStrukturalTransformer extends TransformerAbstract
             'id' => $item['id'],
             'nama' => $item['nama'],
             'eselon_level' => $item['eselon_level'],
-            'ncsis_time' => $item['ncsistime'],
-            'ncsis_time__formatted' => strtotime($item['ncsistime']) ? date('Y-m-d H:i:s', strtotime($item['ncsistime'])) : null,
+            'ncsis_time' => strtotime($item['ncsistime']) ? date('Y-m-d H:i:s', strtotime($item['ncsistime'])) : null, // ? From d-m-Y H:i:s date format
             'struktural_pns' => $item['struktural_pns'],
         ];
     }

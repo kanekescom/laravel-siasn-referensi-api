@@ -4,6 +4,7 @@ namespace Kanekescom\Siasn\Api\Referensi\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
+use Kanekescom\Siasn\Api\Referensi\Exceptions\BadEndpointCallException;
 use Kanekescom\Siasn\Api\Referensi\Facades\Referensi;
 
 class GetReferensi extends Command
@@ -15,16 +16,16 @@ class GetReferensi extends Command
      */
     protected $signature = 'siasn-referensi:get-referensi
                             {--endpoint= : Endpoint API}
-                            {--limit= : Limit Results}
-                            {--offset= : Offset Results}
-                            {--model : Output from model}';
+                            {--limit= : Limit results}
+                            {--offset= : Offset results}
+                            {--from-model : Results from model}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Consume referensi endpoints on SIASN REFERENSI API. Use --limit and --offset options for "memory" issues.';
+    protected $description = 'Consume referensi endpoints on SIASN Referensi API. Use --limit and --offset options for memory issues.';
 
     /**
      * The console command choice map.
@@ -62,34 +63,36 @@ class GetReferensi extends Command
      */
     public function handle()
     {
-        $start = now();
-        $endpoints = collect($this->endpoints);
-        $option = $this->option('endpoint');
-        $endpoint = $endpoints->get($option);
+        $endpointOptions = collect($this->endpoints);
+        $endpoint = $this->option('endpoint');
         $params = [
             'limit' => $this->option('limit'),
             'offset' => $this->option('offset'),
         ];
 
         if (blank($endpoint)) {
-            $option = $this->choice(
+            $endpoint = $this->choice(
                 'What do you want to call endpoint?',
-                $endpoints->prepend('exit', 'exit')->keys()->toArray(),
+                collect(['exit' => 'exit'])->merge($endpointOptions)->keys()->toArray(),
                 'exit',
             );
-
-            if ($option == 'exit') {
-                exit;
-            }
-
-            $endpoint = $endpoints->get($option);
         }
 
-        $case = Str::studly($option);
-        $method = 'get'.$case;
-        $model = "\Kanekescom\Siasn\Api\Referensi\Models\\{$case}";
+        $start = now();
 
-        if ($this->option('model')) {
+        if ($endpoint == 'exit') {
+            return;
+        }
+
+        if (blank($endpointOptions->get($endpoint))) {
+            throw new BadEndpointCallException("Endpoint {$endpoint} does not exist.");
+        }
+
+        $className = Str::studly($endpoint);
+        $method = 'get'.$className;
+        $model = "\Kanekescom\Siasn\Api\Referensi\Models\\{$className}";
+
+        if ($this->option('from-model')) {
             $data = (new $model($params))->all();
         } else {
             $data = Referensi::$method($params)->object();
