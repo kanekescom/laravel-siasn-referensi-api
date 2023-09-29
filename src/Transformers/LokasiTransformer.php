@@ -20,12 +20,10 @@ class LokasiTransformer extends TransformerAbstract
             'nama' => $item['nama'],
             'cepat_kode' => $item['cepatKode'],
             'jenis' => $item['jenis'],
-            'jenis_kabupaten' => $item['jenisKabupaten'],
-            'removal_date' => $item['removalDate'],
-            'removal_date__formatted' => strtotime($item['removalDate']) ? date('Y-m-d H:i:s', strtotime($item['removalDate'])) : null,
+            'jenis_kabupaten' => $item['jenisKabupaten'], // ?
+            'removal_date' => strtotime($item['removalDate']) ? date('Y-m-d H:i:s', strtotime($item['removalDate'])) : null, // ? From d-m-Y H:i:s date format
             'jenis_desa' => $item['jenisDesa'],
-            'tanggal_jorge' => $item['tanggalJorge'],
-            'tanggal_jorge__formatted' => strtotime($item['tanggalJorge']) ? date('Y-m-d H:i:s', strtotime($item['tanggalJorge'])) : null,
+            'tanggal_jorge' => strtotime($item['tanggalJorge']) ? date('Y-m-d H:i:s', strtotime($item['tanggalJorge'])) : null, // ? From d-m-Y H:i:s date format
             'merger_cepat_kode' => $item['mgrCepatKode'],
             'ibu_kota' => $item['ibukota'],
         ];

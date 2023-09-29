@@ -20,8 +20,8 @@ class PendidikanTransformer extends TransformerAbstract
             'cepat_kode' => $item['cepat_kode'],
             'merger_cepat_kode' => $item['merger_cepat_kode'],
             'nama_asli' => $item['nama_asli'],
-            'status' => $item['status'], // int
-            'sub_rumpun_prog_id' => $item['subrumpun_prog_id'], // int
+            'status' => $item['status'], // ? From int
+            'sub_rumpun_prog_id' => $item['subrumpun_prog_id'], // ? From int
             'cepat_kode_induk' => $item['cepat_kode_induk'],
             'sub_rumpun_prog_kode' => $item['subrumpun_prog_kode'],
         ];

@@ -23,9 +23,9 @@ class JabatanFungsionalUmumTransformer extends TransformerAbstract
             'nama_asli' => $item['namaAsli'],
             'kode_menpan' => $item['kodeMenpan'],
             'instansi_id' => $item['instansiId'],
-            'status' => $item['status'], // int
-            'asal_peraturan_id' => $item['asalPeraturanId'], // int
-            'jfu_urusan_pemerintahan' => $item['jfuUrusanPemerintahan'], // int
+            'status' => $item['status'], // ? From int
+            'asal_peraturan_id' => $item['asalPeraturanId'], // ? From int
+            'jfu_urusan_pemerintahan' => $item['jfuUrusanPemerintahan'], // ? From int
         ];
     }
 }

@@ -1,6 +1,6 @@
 {
     "name": "kanekescom/laravel-siasn-referensi-api",
-    "description": "Library to consume the SIASN REFERENSI BKN API",
+    "description": "SIASN Reference Library for Laravel",
     "type": "library",
     "license": "MIT",
     "authors": [

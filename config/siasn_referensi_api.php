@@ -7,7 +7,7 @@ return [
     | Base URL
     |--------------------------------------------------------------------------
     |
-    | This base url is used for the SIASN REFERENSI API.
+    | This base url is used for the SIASN Referensi API.
     |
     */
 

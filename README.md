@@ -1,11 +1,11 @@
-# Laravel SIASN REFERENSI API
+# Laravel SIASN Referensi API
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
 [![StyleCI][ico-styleci]][link-styleci]
 
-This library is the abstraction of SIASN REFERENSI API for access from applications written with Laravel PHP Framework.
+This library is the abstraction of SIASN Referensi API for access from applications written with Laravel PHP Framework.
 
 ## Installation
 
