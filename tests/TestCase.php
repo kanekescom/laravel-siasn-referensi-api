@@ -2,26 +2,25 @@
 
 namespace Kanekescom\Siasn\Api\Referensi\Tests;
 
-abstract class TestCase extends \Orchestra\Testbench\TestCase
+use Kanekescom\Siasn\Api\Referensi\ReferensiServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
+
+class TestCase extends Orchestra
 {
-    /**
-     * @param  \Illuminate\Foundation\Application  $app
-     * @return array
-     */
+    protected function setUp(): void
+    {
+        parent::setUp();
+    }
+
     protected function getPackageProviders($app)
     {
         return [
-            \Kanekescom\Siasn\Api\Referensi\ReferensiServiceProvider::class,
+            ReferensiServiceProvider::class,
         ];
     }
 
-    /**
-     * Set up the environment.
-     *
-     * @param  \Illuminate\Foundation\Application  $app
-     */
-    protected function getEnvironmentSetUp($app)
+    public function getEnvironmentSetUp($app)
     {
-        $app['config']->set('siasn_api', require __DIR__.'/../vendor/kanekescom/laravel-siasn-api/config/siasn_api.php');
+        $app['config']->set('siasn-api', require __DIR__.'/../vendor/kanekescom/laravel-siasn-api/config/siasn-api.php');
     }
 }
