@@ -9,184 +9,184 @@ trait HasEndpoint
     /**
      * Issue a GET request.
      */
-    public function getAgama($params = []): Response
+    public function getAgama($query = []): Response
     {
-        return $this->get('/agama', $params);
+        return $this->get('/agama/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getAlasanHukumanDisiplin($params = []): Response
+    public function getAlasanHukumanDisiplin($query = []): Response
     {
-        return $this->get('/alasan-hukuman-disiplin', $params);
+        return $this->get('/alasan-hukuman-disiplin/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getAsnJenisJabatan($params = []): Response
+    public function getAsnJenisJabatan($query = []): Response
     {
-        return $this->get('/asn-jenis-jabatan', $params);
+        return $this->get('/asn-jenis-jabatan/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getAsnJenjangJabatan($params = []): Response
+    public function getAsnJenjangJabatan($query = []): Response
     {
-        return $this->get('/asn-jenjang-jabatan', $params);
+        return $this->get('/asn-jenjang-jabatan/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getEselon($params = []): Response
+    public function getEselon($query = []): Response
     {
-        return $this->get('/eselon', $params);
+        return $this->get('/eselon/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getGolongan($params = []): Response
+    public function getGolongan($query = []): Response
     {
-        return $this->get('/golongan', $params);
+        return $this->get('/golongan/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getInstansi($params = []): Response
+    public function getInstansi($query = []): Response
     {
-        return $this->get('/instansi', $params);
+        return $this->get('/instansi/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getJabatanFungsional($params = []): Response
+    public function getJabatanFungsional($query = []): Response
     {
-        return $this->get('/jabatan-fungsional', $params);
+        return $this->get('/jabatan-fungsional/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getJabatanFungsionalUmum($params = []): Response
+    public function getJabatanFungsionalUmum($query = []): Response
     {
-        return $this->get('/jabatan-fungsional-umum', $params);
+        return $this->get('/jabatan-fungsional-umum/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getJenisAnak($params = []): Response
+    public function getJenisAnak($query = []): Response
     {
-        return $this->get('/jenis-anak', $params);
+        return $this->get('/jenis-anak/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getJenisHukuman($params = []): Response
+    public function getJenisDiklat($query = []): Response
     {
-        return $this->get('/jenis-hukuman', $params);
+        return $this->get('/jenis-diklat/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getJenisJabatan($params = []): Response
+    public function getJenisHukuman($query = []): Response
     {
-        return $this->get('/jenis-jabatan', $params);
+        return $this->get('/jenis-hukuman/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getKanreg($params = []): Response
+    public function getJenisJabatan($query = []): Response
     {
-        return $this->get('/kanreg', $params);
+        return $this->get('/jenis-jabatan/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getKedudukanHukum($params = []): Response
+    public function getKanreg($query = []): Response
     {
-        return $this->get('/kedudukan-hukum', $params);
+        return $this->get('/kanreg/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getKelJabatan($params = []): Response
+    public function getKedudukanHukum($query = []): Response
     {
-        return $this->get('/kel-jabatan', $params);
+        return $this->get('/kedudukan-hukum/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getLatihanStruktural($params = []): Response
+    public function getKelJabatan($query = []): Response
     {
-        return $this->get('/latihan-struktural', $params);
+        return $this->get('/kel-jabatan/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getLokasi($params = []): Response
+    public function getLatihanStruktural($query = []): Response
     {
-        return $this->get('/lokasi', $params);
+        return $this->get('/latihan-struktural/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getPendidikan($params = []): Response
+    public function getLokasi($query = []): Response
     {
-        return $this->get('/pendidikan', $params);
+        return $this->get('/lokasi/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getRefDokumen($params = []): Response
+    public function getPendidikan($query = []): Response
     {
-        return $this->get('/ref-dokumen', $params);
+        return $this->get('/pendidikan/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getRefJenjangJf($params = []): Response
+    public function getRefDokumen($query = []): Response
     {
-        return $this->get('/ref-jenjang-jf', $params);
+        return $this->get('/ref-dokumen/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getSatuanKerja($params = []): Response
+    public function getRefJenjangJf($query = []): Response
     {
-        return $this->get('/satuan-kerja', $params);
+        return $this->get('/ref-jenjang-jf/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getTingkatPendidikan($params = []): Response
+    public function getSatuanKerja($query = []): Response
     {
-        return $this->get('/tingkat-pendidikan', $params);
+        return $this->get('/satuan-kerja/search', $query);
     }
 
     /**
      * Issue a GET request.
      */
-    public function getJenisDiklat($params = []): Response
+    public function getTingkatPendidikan($query = []): Response
     {
-        return $this->get('/jenis-diklat', $params);
+        return $this->get('/tingkat-pendidikan/search', $query);
     }
 }
