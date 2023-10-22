@@ -12,7 +12,9 @@ class ReferensiServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-siasn-referensi-api')
             ->hasConfigFile()
-            ->hasCommand(Commands\GetCommand::class);
+            ->hasCommands([
+                Commands\GetCommand::class,
+            ]);
     }
 
     public function packageRegistered(): void
@@ -22,7 +24,7 @@ class ReferensiServiceProvider extends PackageServiceProvider
 
     protected function registerHttpMacroHelpers(): void
     {
-        if (! method_exists(\Illuminate\Support\Facades\Http::class, 'macro')) { // Lumen
+        if (!method_exists(\Illuminate\Support\Facades\Http::class, 'macro')) { // Lumen
             return;
         }
 
