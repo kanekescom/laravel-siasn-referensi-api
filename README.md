@@ -25,20 +25,11 @@ You can install the package via composer:
 composer require kanekescom/laravel-siasn-referensi-api
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="laravel-siasn-referensi-api-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-siasn-referensi-api-config"
+php artisan vendor:publish --tag="siasn-referensi-api-config"
 ```
-
-This is the contents of the published config file.
 
 ## Usage
 
