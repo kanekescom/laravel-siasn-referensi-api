@@ -92,13 +92,11 @@ class GetCommand extends Command
             throw new InvalidJsonException;
         }
 
+        $start = now();
         $query = array_merge($input, [
             'limit' => $this->option('limit'),
             'offset' => $this->option('offset'),
         ]);
-
-        $start = now();
-
         $method = 'get'.Str::studly($endpoint);
 
         $this->info(json_encode(
