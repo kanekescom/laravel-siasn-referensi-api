@@ -12,7 +12,9 @@ class ReferensiServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-siasn-referensi-api')
             ->hasConfigFile()
-            ->hasCommand(Commands\GetCommand::class);
+            ->hasCommands([
+                Commands\GetCommand::class,
+            ]);
     }
 
     public function packageRegistered(): void
