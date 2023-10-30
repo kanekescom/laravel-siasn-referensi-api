@@ -10,7 +10,7 @@ class Referensi extends ClassExtender
 {
     public function __construct()
     {
-        $this->class = Siasn::withSso()->baseUrl(config('siasn-referensi-api.base_url'));
+        $this->class = Siasn::baseUrl(config('siasn-referensi-api.base_url'));
     }
 
     public function getAgama($query = []): Response
