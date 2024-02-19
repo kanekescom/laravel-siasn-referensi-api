@@ -43,7 +43,6 @@ class GetCommand extends Command
         'jabatan-fungsional' => '/jabatan-fungsional',
         'jabatan-fungsional-umum' => '/jabatan-fungsional-umum',
         'jenis-anak' => '/jenis-anak',
-        'jenis-diklat' => '/jenis-diklat',
         'jenis-hukuman' => '/jenis-hukuman',
         'jenis-jabatan' => '/jenis-jabatan',
         'kanreg' => '/kanreg',
@@ -56,6 +55,7 @@ class GetCommand extends Command
         'ref-jenjang-jf' => '/ref-jenjang-jf',
         'satuan-kerja' => '/satuan-kerja',
         'tingkat-pendidikan' => '/tingkat-pendidikan',
+        'jenis-diklat' => '/jenis-diklat',
     ];
 
     /**

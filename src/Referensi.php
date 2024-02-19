@@ -13,118 +13,118 @@ class Referensi extends ClassExtender
         $this->class = Siasn::baseUrl(config('siasn-referensi-api.base_url'));
     }
 
-    public function getAgama($query = []): Response
+    public function getAgama(array $query = []): Response
     {
         return $this->get('/agama/search', $query);
     }
 
-    public function getAlasanHukumanDisiplin($query = []): Response
+    public function getAlasanHukumanDisiplin(array $query = []): Response
     {
         return $this->get('/alasan-hukuman-disiplin/search', $query);
     }
 
-    public function getAsnJenisJabatan($query = []): Response
+    public function getAsnJenisJabatan(array $query = []): Response
     {
         return $this->get('/asn-jenis-jabatan/search', $query);
     }
 
-    public function getAsnJenjangJabatan($query = []): Response
+    public function getAsnJenjangJabatan(array $query = []): Response
     {
         return $this->get('/asn-jenjang-jabatan/search', $query);
     }
 
-    public function getEselon($query = []): Response
+    public function getEselon(array $query = []): Response
     {
         return $this->get('/eselon/search', $query);
     }
 
-    public function getGolongan($query = []): Response
+    public function getGolongan(array $query = []): Response
     {
         return $this->get('/golongan/search', $query);
     }
 
-    public function getInstansi($query = []): Response
+    public function getInstansi(array $query = []): Response
     {
         return $this->get('/instansi/search', $query);
     }
 
-    public function getJabatanFungsional($query = []): Response
+    public function getJabatanFungsional(array $query = []): Response
     {
         return $this->get('/jabatan-fungsional/search', $query);
     }
 
-    public function getJabatanFungsionalUmum($query = []): Response
+    public function getJabatanFungsionalUmum(array $query = []): Response
     {
         return $this->get('/jabatan-fungsional-umum/search', $query);
     }
 
-    public function getJenisAnak($query = []): Response
+    public function getJenisAnak(array $query = []): Response
     {
         return $this->get('/jenis-anak/search', $query);
     }
 
-    public function getJenisDiklat($query = []): Response
-    {
-        return $this->get('/jenis-diklat/search', $query);
-    }
-
-    public function getJenisHukuman($query = []): Response
+    public function getJenisHukuman(array $query = []): Response
     {
         return $this->get('/jenis-hukuman/search', $query);
     }
 
-    public function getJenisJabatan($query = []): Response
+    public function getJenisJabatan(array $query = []): Response
     {
         return $this->get('/jenis-jabatan/search', $query);
     }
 
-    public function getKanreg($query = []): Response
+    public function getKanreg(array $query = []): Response
     {
         return $this->get('/kanreg/search', $query);
     }
 
-    public function getKedudukanHukum($query = []): Response
+    public function getKedudukanHukum(array $query = []): Response
     {
         return $this->get('/kedudukan-hukum/search', $query);
     }
 
-    public function getKelJabatan($query = []): Response
+    public function getKelJabatan(array $query = []): Response
     {
         return $this->get('/kel-jabatan/search', $query);
     }
 
-    public function getLatihanStruktural($query = []): Response
+    public function getLatihanStruktural(array $query = []): Response
     {
         return $this->get('/latihan-struktural/search', $query);
     }
 
-    public function getLokasi($query = []): Response
+    public function getLokasi(array $query = []): Response
     {
         return $this->get('/lokasi/search', $query);
     }
 
-    public function getPendidikan($query = []): Response
+    public function getPendidikan(array $query = []): Response
     {
         return $this->get('/pendidikan/search', $query);
     }
 
-    public function getRefDokumen($query = []): Response
+    public function getRefDokumen(array $query = []): Response
     {
         return $this->get('/ref-dokumen/search', $query);
     }
 
-    public function getRefJenjangJf($query = []): Response
+    public function getRefJenjangJf(array $query = []): Response
     {
         return $this->get('/ref-jenjang-jf/search', $query);
     }
 
-    public function getSatuanKerja($query = []): Response
+    public function getSatuanKerja(array $query = []): Response
     {
         return $this->get('/satuan-kerja/search', $query);
     }
 
-    public function getTingkatPendidikan($query = []): Response
+    public function getTingkatPendidikan(array $query = []): Response
     {
         return $this->get('/tingkat-pendidikan/search', $query);
+    }
+
+    public function getJenisDiklat(array $query = []): Response
+    {
+        return $this->get('/jenis-diklat/search', $query);
     }
 }
