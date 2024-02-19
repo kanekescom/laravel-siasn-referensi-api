@@ -33,7 +33,11 @@ php artisan vendor:publish --tag="siasn-referensi-api-config"
 
 ## Usage
 
-Coming Soon
+Get referensi data from siasn
+
+```bash
+php artisan siasn-referensi:get
+```
 
 ## Testing
 
