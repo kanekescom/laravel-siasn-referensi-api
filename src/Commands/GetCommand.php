@@ -16,9 +16,9 @@ class GetCommand extends Command
      * @var string
      */
     protected $signature = 'siasn-referensi:get
-                        {endpoint? : Endpoint API}
-                        {--limit= : Limit results}
-                        {--offset= : Offset results}';
+                            {endpoint? : Endpoint API}
+                            {--limit= : Limit results}
+                            {--offset= : Offset results}';
 
     /**
      * The console command description.
