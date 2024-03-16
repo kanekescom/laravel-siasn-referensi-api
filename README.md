@@ -31,6 +31,12 @@ You can publish the config file with:
 php artisan vendor:publish --tag="siasn-referensi-api-config"
 ```
 
+Or, all installations can be completed with the install command:
+
+```bash
+php artisan siasn-referensi-api:install
+```
+
 ## Usage
 
 Get referensi data from siasn

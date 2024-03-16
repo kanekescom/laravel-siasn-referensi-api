@@ -14,7 +14,18 @@ class ReferensiServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasCommands([
                 Commands\GetCommand::class,
-            ]);
+            ])
+            ->hasInstallCommand(function ($command) {
+                $command
+                    ->startWith(function ($command) {
+                        $command->info('Hello, and welcome to my great laravel package!');
+                    })
+                    ->publishConfigFile()
+                    ->askToStarRepoOnGitHub('kanekescom/laravel-siasn-referensi-api')
+                    ->endWith(function ($command) {
+                        $command->info('Have a great day!');
+                    });
+            });
     }
 
     public function packageRegistered(): void
