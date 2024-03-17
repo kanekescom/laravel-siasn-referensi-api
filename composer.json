@@ -84,7 +84,7 @@
                 "Kanekescom\\Siasn\\Referensi\\Api\\ReferensiServiceProvider"
             ],
             "aliases": {
-                "Referensi": "Kanekescom\\Siasn\\Referensi\\Api\\Facades\\Referensi"
+                "ReferensiApi": "Kanekescom\\Siasn\\Referensi\\Api\\Facades\\Referensi"
             }
         },
         "branch-alias": {
