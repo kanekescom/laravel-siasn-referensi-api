@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Referensi;
+namespace Kanekescom\Siasn\Referensi\Api;
 
 use Illuminate\Http\Client\Response;
 use Kanekescom\Helperia\Support\ClassExtender;

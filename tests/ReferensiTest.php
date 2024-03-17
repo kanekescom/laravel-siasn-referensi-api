@@ -1,6 +1,6 @@
 <?php
 
-$class = new ReflectionClass(\Kanekescom\Siasn\Api\Referensi\Referensi::class);
+$class = new ReflectionClass(\Kanekescom\Siasn\Referensi\Api\Referensi::class);
 $methods = array_filter($class->getMethods(), function ($method) {
     return ! $method->isConstructor()
         && ! $method->isDestructor()
@@ -17,7 +17,7 @@ foreach ($methodNames as $method) {
     it("can {$testName}", function () use ($method) {
         $limit = 10;
         $offset = 0;
-        $response = \Kanekescom\Siasn\Api\Referensi\Facades\Referensi::$method([
+        $response = \Kanekescom\Siasn\Referensi\Api\Facades\Referensi::$method([
             'limit' => $limit,
             'offset' => $offset,
         ]);
