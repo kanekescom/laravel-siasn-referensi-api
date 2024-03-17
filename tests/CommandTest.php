@@ -2,7 +2,7 @@
 
 it('can not get doesnt exist endpoint', function () {
     $this->artisan('siasn-referensi:get doesnt-exist-endpoint --limit=10')->assertSuccessful();
-})->throws(\Kanekescom\Siasn\Api\Referensi\Exceptions\BadEndpointCallException::class);
+})->throws(\Kanekescom\Siasn\Referensi\Api\Exceptions\BadEndpointCallException::class);
 
 it('can not get doesnt exist endpoint and in the question, choose to exit', function () {
     $this->artisan('siasn-referensi:get --limit=10')
@@ -10,7 +10,7 @@ it('can not get doesnt exist endpoint and in the question, choose to exit', func
         ->assertSuccessful();
 });
 
-$class = new ReflectionClass(\Kanekescom\Siasn\Api\Referensi\Referensi::class);
+$class = new ReflectionClass(\Kanekescom\Siasn\Referensi\Api\Referensi::class);
 $methods = array_filter($class->getMethods(), function ($method) {
     return ! $method->isConstructor()
         && ! $method->isDestructor()

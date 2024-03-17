@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Referensi\Exceptions;
+namespace Kanekescom\Siasn\Referensi\Api\Exceptions;
 
 use Exception;
 

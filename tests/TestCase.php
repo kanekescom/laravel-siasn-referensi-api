@@ -1,8 +1,8 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Referensi\Tests;
+namespace Kanekescom\Siasn\Referensi\Api\Tests;
 
-use Kanekescom\Siasn\Api\Referensi\ReferensiServiceProvider;
+use Kanekescom\Siasn\Referensi\Api\ReferensiServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra

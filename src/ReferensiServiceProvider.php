@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Referensi;
+namespace Kanekescom\Siasn\Referensi\Api;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;

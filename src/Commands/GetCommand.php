@@ -1,12 +1,12 @@
 <?php
 
-namespace Kanekescom\Siasn\Api\Referensi\Commands;
+namespace Kanekescom\Siasn\Referensi\Api\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
-use Kanekescom\Siasn\Api\Referensi\Exceptions\BadEndpointCallException;
-use Kanekescom\Siasn\Api\Referensi\Exceptions\InvalidJsonException;
-use Kanekescom\Siasn\Api\Referensi\Facades\Referensi;
+use Kanekescom\Siasn\Referensi\Api\Exceptions\BadEndpointCallException;
+use Kanekescom\Siasn\Referensi\Api\Exceptions\InvalidJsonException;
+use Kanekescom\Siasn\Referensi\Api\Facades\Referensi;
 
 class GetCommand extends Command
 {
