@@ -5,7 +5,6 @@ namespace Kanekescom\Siasn\Referensi\Api\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 use Kanekescom\Siasn\Referensi\Api\Exceptions\BadEndpointCallException;
-use Kanekescom\Siasn\Referensi\Api\Exceptions\InvalidJsonException;
 use Kanekescom\Siasn\Referensi\Api\Facades\Referensi;
 
 class GetCommand extends Command
@@ -82,21 +81,11 @@ class GetCommand extends Command
             throw new BadEndpointCallException("Endpoint {$endpoint} does not exist.");
         }
 
-        $input = json_decode($this->ask('Write json for filter! (Optional)'), true);
-
-        if ($input == null) {
-            $input = [];
-        }
-
-        if (! is_array($input)) {
-            throw new InvalidJsonException;
-        }
-
         $start = now();
-        $query = array_merge($input, [
+        $query = [
             'limit' => $this->option('limit'),
             'offset' => $this->option('offset'),
-        ]);
+        ];
         $method = 'get'.Str::studly($endpoint);
 
         $this->info(json_encode(
