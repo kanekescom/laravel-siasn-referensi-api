@@ -28,23 +28,19 @@ foreach ($methodNames as $endpoint) {
 
     it("can {$testName}", function () use ($endpoint) {
         $this->artisan("siasn-referensi:get {$endpoint} --limit=10")
-            ->expectsQuestion('Write json for filter! (Optional)', '')
             ->assertSuccessful();
 
         $this->artisan('siasn-referensi:get --limit=10')
             ->expectsQuestion('What do you want to call endpoint?', (string) $endpoint)
-            ->expectsQuestion('Write json for filter! (Optional)', '')
             ->assertSuccessful();
     });
 
     it("can not {$testName} because invalid json", function () use ($endpoint) {
         $this->artisan("siasn-referensi:get {$endpoint} --limit=10")
-            ->expectsQuestion('Write json for filter! (Optional)', fake()->word())
             ->assertSuccessful();
 
         $this->artisan('siasn-referensi:get --limit=10')
             ->expectsQuestion('What do you want to call endpoint?', (string) $endpoint)
-            ->expectsQuestion('Write json for filter! (Optional)', fake()->word())
             ->assertSuccessful();
     });
 }
