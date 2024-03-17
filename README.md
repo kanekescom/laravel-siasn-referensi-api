@@ -47,11 +47,46 @@ php artisan siasn-referensi-api:install
 
 ## Usage
 
-Get referensi data from siasn
+Get referensi data from SIASN
 
 ```bash
 php artisan siasn-referensi:get
 ```
+
+Get specific endpoint referensi data from SIASN
+
+```bash
+php artisan siasn-referensi:get agama
+```
+
+Available endpoints:
+- agama
+- alasan-hukuman-disiplin
+- asn-jenis-jabatan
+- asn-jenjang-jabatan
+- eselon
+- golongan
+- instansi
+- jabatan-fungsional
+- jabatan-fungsional-umum
+- jenis-anak
+- jenis-hukuman
+- jenis-jabatan
+- kanreg
+- kedudukan-hukum
+- kel-jabatan
+- latihan-struktural
+- lokasi
+- pendidikan
+- ref-dokumen
+- ref-jenjang-jf
+- satuan-kerja
+- tingkat-pendidikan
+- jenis-diklat
+
+Optional:
+- `--limit=n` limit n number of records
+- `--offset=n` offset n number of records
 
 ## Testing
 
