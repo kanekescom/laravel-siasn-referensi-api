@@ -1,18 +1,78 @@
 <?php
 
-$class = new ReflectionClass(\Kanekescom\Siasn\Referensi\Api\Referensi::class);
-$methods = array_filter($class->getMethods(), function ($method) {
-    return ! $method->isConstructor()
-        && ! $method->isDestructor()
-        && ! $method->isInternal()
-        && strpos($method->name, '__') !== 0;
-});
-$methodNames = array_map(function ($method) {
-    return $method->getName();
-}, $methods);
-
-foreach ($methodNames as $method) {
-    $testName = \Illuminate\Support\Str::of($method)->headline()->lower();
+$endpoints = collect([
+    'agama' => [
+        'method' => 'getAgama',
+    ],
+    'alasan-hukuman-disiplin' => [
+        'method' => 'getAlasanHukumanDisiplin',
+    ],
+    'asn-jenis-jabatan' => [
+        'method' => 'getAsnJenisJabatan',
+    ],
+    'asn-jenjang-jabatan' => [
+        'method' => 'getAsnJenjangJabatan',
+    ],
+    'eselon' => [
+        'method' => 'getEselon',
+    ],
+    'golongan' => [
+        'method' => 'getGolongan',
+    ],
+    'instansi' => [
+        'method' => 'getInstansi',
+    ],
+    'jabatan-fungsional' => [
+        'method' => 'getJabatanFungsional',
+    ],
+    'jabatan-fungsional-umum' => [
+        'method' => 'getJabatanFungsionalUmum',
+    ],
+    'jenis-anak' => [
+        'method' => 'getJenisAnak',
+    ],
+    'jenis-hukuman' => [
+        'method' => 'getJenisHukuman',
+    ],
+    'jenis-jabatan' => [
+        'method' => 'getJenisJabatan',
+    ],
+    'kanreg' => [
+        'method' => 'getKanreg',
+    ],
+    'kedudukan-hukum' => [
+        'method' => 'getKedudukanHukum',
+    ],
+    'kel-jabatan' => [
+        'method' => 'getKelJabatan',
+    ],
+    'latihan-struktural' => [],
+    'lokasi' => [
+        'method' => 'getLokasi',
+    ],
+    'pendidikan' => [
+        'method' => 'getPendidikan',
+    ],
+    'ref-dokumen' => [
+        'method' => 'getRefDokumen',
+    ],
+    'ref-jenjang-jf' => [
+        'method' => 'getRefJenjangJf',
+    ],
+    'satuan-kerja' => [
+        'method' => 'getSatuanKerja',
+    ],
+    'tingkat-pendidikan' => [
+        'method' => 'getTingkatPendidikan',
+    ],
+    'jenis-diklat' => [
+        'method' => 'getJenisDiklat',
+    ],
+])->each(function ($endpoint, $key) {
+    $testName = \Illuminate\Support\Str::of($key)
+        ->headline()
+        ->lower();
+    $method = $endpoint['method'];
 
     it("can {$testName}", function () use ($method) {
         $limit = 10;
@@ -31,4 +91,4 @@ foreach ($methodNames as $method) {
         //     'offset' => $offset,
         // ]);
     });
-}
+});
