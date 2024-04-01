@@ -10,20 +10,31 @@ it('can not get doesnt exist endpoint and in the question, choose to exit', func
         ->assertSuccessful();
 });
 
-$class = new ReflectionClass(\Kanekescom\Siasn\Referensi\Api\Referensi::class);
-$methods = array_filter($class->getMethods(), function ($method) {
-    return ! $method->isConstructor()
-        && ! $method->isDestructor()
-        && ! $method->isInternal()
-        && strpos($method->name, '__') !== 0;
-});
-$methodNames = array_map(function ($method) {
-    return \Illuminate\Support\Str::of($method->getName())
-        ->kebab()
-        ->replaceFirst('get-', '');
-}, $methods);
-
-foreach ($methodNames as $endpoint) {
+$endpoints = collect([
+    'agama',
+    'alasan-hukuman-disiplin',
+    'asn-jenis-jabatan',
+    'asn-jenjang-jabatan',
+    'eselon',
+    'golongan',
+    'instansi',
+    'jabatan-fungsional',
+    'jabatan-fungsional-umum',
+    'jenis-anak',
+    'jenis-hukuman',
+    'jenis-jabatan',
+    'kanreg',
+    'kedudukan-hukum',
+    'kel-jabatan',
+    'latihan-struktural',
+    'lokasi',
+    'pendidikan',
+    'ref-dokumen',
+    'ref-jenjang-jf',
+    'satuan-kerja',
+    'tingkat-pendidikan',
+    'jenis-diklat',
+])->each(function ($endpoint) {
     $testName = \Illuminate\Support\Str::of($endpoint)->headline()->lower();
 
     it("can {$testName}", function () use ($endpoint) {
@@ -43,4 +54,4 @@ foreach ($methodNames as $endpoint) {
             ->expectsQuestion('What do you want to call endpoint?', (string) $endpoint)
             ->assertSuccessful();
     });
-}
+});
