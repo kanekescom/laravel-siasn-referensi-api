@@ -5,6 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/kanekescom/laravel-siasn-referensi-api/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/kanekescom/laravel-siasn-referensi-api/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/kanekescom/laravel-siasn-referensi-api.svg?style=flat-square)](https://packagist.org/packages/kanekescom/laravel-siasn-referensi-api)
 
+SIASN REFERENSI REST API Client for Laravel.
 This library is the abstraction of SIASN REFERENSI API for access from applications written with Laravel PHP Framework.
 
 ## Support us
@@ -15,11 +16,11 @@ Want to provide tangible support? Use the following platform to contribute to op
 - Patreon https://s.id/hadipatreon
 - Saweria https://s.id/hadisaweria
 
-We highly appreciate you sending us a few cups of coffee to accompany us while writing code. Super thanks.
+We highly appreciate you sending us a few cups of coffee to accompany us while writing code. Super, thanks.
 
 ## Use pro version
 
-We also offer a professional version. We're excited for you to try it out, as it allows us to consistently deliver high-quality software. Don't hesitate to contact us at kanekescom@gmail.com for further information.
+We also offer a professional version. We're excited for you to try it out, as it allows us to consistently deliver high-quality software. Feel free to contact us at kanekescom@gmail.com or @achmadhadikurnia (maintainer) for further information.
 
 - Laravel SIASN Referensi Panel
 - Laravel SIASN SIMPEG Panel
@@ -30,7 +31,7 @@ We also offer a professional version. We're excited for you to try it out, as it
 You can install the package via composer:
 
 ```bash
-composer require kanekescom/laravel-siasn-referensi-api
+composer require kanekescom/laravel-siasn-api
 ```
 
 You can publish the config file with:
@@ -39,7 +40,29 @@ You can publish the config file with:
 php artisan vendor:publish --tag="siasn-referensi-api-config"
 ```
 
-Or, all installations can be completed with the install command:
+This is the contents of the published config file:
+
+```php
+// config/siasn-referensi-api.php
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Base URL
+    |--------------------------------------------------------------------------
+    |
+    | This base url is used for the SIASN REFERENSI API.
+    |
+    */
+
+    'base_url' => 'https://apimws.bkn.go.id:8243/referensi_siasn/1',
+
+];
+```
+
+Or, all installations can be completed with the installation command:
 
 ```bash
 php artisan siasn-referensi-api:install
